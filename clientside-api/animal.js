@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // Develop server URL
-let url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/animals';
+let url = 'http://localhost:3000/api/animals';
 
 // Staging server URL
 // const postBaseUrl = 'http://weathermood-staging.us-west-2.elasticbeanstalk.com/api';
