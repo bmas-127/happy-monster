@@ -1,0 +1,1049 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 12.7
+-- Dumped by pg_dump version 13.3
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+ALTER TABLE ONLY public.useranimal DROP CONSTRAINT useranimal_userid_fkey;
+ALTER TABLE ONLY public.useranimal DROP CONSTRAINT useranimal_animalid_fkey;
+ALTER TABLE ONLY public.posts DROP CONSTRAINT posts_userid_fkey;
+DROP INDEX public.posts_idx_ts;
+ALTER TABLE ONLY public.users DROP CONSTRAINT users_pkey;
+ALTER TABLE ONLY public.useranimal DROP CONSTRAINT useranimal_pkey;
+ALTER TABLE ONLY public.posts DROP CONSTRAINT posts_pkey;
+ALTER TABLE ONLY public.animals DROP CONSTRAINT animals_pkey;
+ALTER TABLE public.users ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.useranimal ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.posts ALTER COLUMN id DROP DEFAULT;
+DROP SEQUENCE public.users_id_seq;
+DROP TABLE public.users;
+DROP SEQUENCE public.useranimal_id_seq;
+DROP TABLE public.useranimal;
+DROP SEQUENCE public.posts_id_seq;
+DROP TABLE public.posts;
+DROP TABLE public.animals;
+DROP TYPE public.status;
+DROP TYPE public.species;
+--
+-- Name: species; Type: TYPE; Schema: public; Owner: -
+--
+
+CREATE TYPE public.species AS ENUM (
+    'dog',
+    'cat',
+    'dinosaur'
+);
+
+
+--
+-- Name: status; Type: TYPE; Schema: public; Owner: -
+--
+
+CREATE TYPE public.status AS ENUM (
+    'egg',
+    'born',
+    'death'
+);
+
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: animals; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.animals (
+    species public.species NOT NULL,
+    breedingdays integer NOT NULL
+);
+
+
+--
+-- Name: posts; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.posts (
+    id integer NOT NULL,
+    userid integer NOT NULL,
+    score integer NOT NULL,
+    text text NOT NULL,
+    createday bigint DEFAULT date_part('epoch'::text, now()) NOT NULL
+);
+
+
+--
+-- Name: posts_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.posts_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: posts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.posts_id_seq OWNED BY public.posts.id;
+
+
+--
+-- Name: useranimal; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.useranimal (
+    id integer NOT NULL,
+    userid integer NOT NULL,
+    animalid public.species NOT NULL,
+    animalstatus public.status NOT NULL,
+    feedingdays integer DEFAULT 0 NOT NULL,
+    timebirth bigint DEFAULT date_part('epoch'::text, now()) NOT NULL,
+    timeend bigint
+);
+
+
+--
+-- Name: useranimal_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.useranimal_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: useranimal_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.useranimal_id_seq OWNED BY public.useranimal.id;
+
+
+--
+-- Name: users; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.users (
+    id integer NOT NULL,
+    name name NOT NULL,
+    createday bigint DEFAULT date_part('epoch'::text, now()) NOT NULL,
+    todaysscore integer DEFAULT 0 NOT NULL,
+    weeklyscore integer DEFAULT 0 NOT NULL,
+    monthlyscore integer DEFAULT 0 NOT NULL,
+    cannewanimal integer DEFAULT 1 NOT NULL,
+    dailynote integer DEFAULT 0 NOT NULL
+);
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.users_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
+
+
+--
+-- Name: posts id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.posts ALTER COLUMN id SET DEFAULT nextval('public.posts_id_seq'::regclass);
+
+
+--
+-- Name: useranimal id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.useranimal ALTER COLUMN id SET DEFAULT nextval('public.useranimal_id_seq'::regclass);
+
+
+--
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
+
+
+--
+-- Data for Name: animals; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.animals (species, breedingdays) FROM stdin;
+cat	15
+dog	7
+dinosaur	28
+\.
+
+
+--
+-- Data for Name: posts; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.posts (id, userid, score, text, createday) FROM stdin;
+1	92	3	hope debug successfully1	1624358984
+2	99	3	hope debug successfully2	1624358984
+3	48	9	hope debug successfully3	1624358984
+4	25	5	hope debug successfully4	1624358984
+5	75	1	hope debug successfully5	1624358984
+6	66	8	hope debug successfully6	1624358984
+7	17	5	hope debug successfully7	1624358984
+8	12	9	hope debug successfully8	1624358984
+9	17	7	hope debug successfully9	1624358984
+10	6	1	hope debug successfully10	1624358984
+11	23	9	hope debug successfully11	1624358984
+12	100	9	hope debug successfully12	1624358984
+13	96	1	hope debug successfully13	1624358984
+14	12	2	hope debug successfully14	1624358984
+15	85	8	hope debug successfully15	1624358984
+16	43	9	hope debug successfully16	1624358984
+17	83	10	hope debug successfully17	1624358984
+18	50	9	hope debug successfully18	1624358984
+19	78	9	hope debug successfully19	1624358984
+20	68	2	hope debug successfully20	1624358984
+21	28	4	hope debug successfully21	1624358984
+22	9	4	hope debug successfully22	1624358984
+23	48	1	hope debug successfully23	1624358984
+24	84	2	hope debug successfully24	1624358984
+25	11	3	hope debug successfully25	1624358984
+26	72	6	hope debug successfully26	1624358984
+27	81	3	hope debug successfully27	1624358984
+28	52	10	hope debug successfully28	1624358984
+29	97	8	hope debug successfully29	1624358984
+30	66	6	hope debug successfully30	1624358984
+31	86	5	hope debug successfully31	1624358984
+32	43	6	hope debug successfully32	1624358984
+33	93	7	hope debug successfully33	1624358984
+34	1	4	hope debug successfully34	1624358984
+35	48	7	hope debug successfully35	1624358984
+36	5	10	hope debug successfully36	1624358984
+37	58	1	hope debug successfully37	1624358984
+38	52	7	hope debug successfully38	1624358984
+39	69	5	hope debug successfully39	1624358984
+40	8	9	hope debug successfully40	1624358984
+41	39	7	hope debug successfully41	1624358984
+42	94	1	hope debug successfully42	1624358984
+43	56	1	hope debug successfully43	1624358984
+44	58	5	hope debug successfully44	1624358984
+45	35	5	hope debug successfully45	1624358984
+46	12	2	hope debug successfully46	1624358984
+47	87	3	hope debug successfully47	1624358984
+48	99	3	hope debug successfully48	1624358984
+49	91	5	hope debug successfully49	1624358984
+50	47	10	hope debug successfully50	1624358984
+51	61	2	hope debug successfully51	1624358984
+52	87	1	hope debug successfully52	1624358984
+53	66	9	hope debug successfully53	1624358984
+54	25	10	hope debug successfully54	1624358984
+55	53	4	hope debug successfully55	1624358984
+56	57	2	hope debug successfully56	1624358984
+57	42	2	hope debug successfully57	1624358984
+58	51	5	hope debug successfully58	1624358984
+59	100	3	hope debug successfully59	1624358984
+60	58	9	hope debug successfully60	1624358984
+61	41	8	hope debug successfully61	1624358984
+62	11	7	hope debug successfully62	1624358984
+63	77	4	hope debug successfully63	1624358984
+64	38	2	hope debug successfully64	1624358984
+65	30	8	hope debug successfully65	1624358984
+66	35	4	hope debug successfully66	1624358984
+67	65	6	hope debug successfully67	1624358984
+68	70	3	hope debug successfully68	1624358984
+69	70	3	hope debug successfully69	1624358984
+70	18	1	hope debug successfully70	1624358984
+71	94	5	hope debug successfully71	1624358984
+72	55	6	hope debug successfully72	1624358984
+73	86	1	hope debug successfully73	1624358984
+74	6	6	hope debug successfully74	1624358984
+75	78	5	hope debug successfully75	1624358984
+76	84	1	hope debug successfully76	1624358984
+77	27	3	hope debug successfully77	1624358984
+78	43	5	hope debug successfully78	1624358984
+79	22	7	hope debug successfully79	1624358984
+80	73	8	hope debug successfully80	1624358984
+81	73	6	hope debug successfully81	1624358984
+82	98	3	hope debug successfully82	1624358984
+83	6	6	hope debug successfully83	1624358984
+84	37	2	hope debug successfully84	1624358984
+85	49	5	hope debug successfully85	1624358984
+86	62	8	hope debug successfully86	1624358984
+87	55	7	hope debug successfully87	1624358984
+88	44	2	hope debug successfully88	1624358984
+89	21	1	hope debug successfully89	1624358984
+90	66	2	hope debug successfully90	1624358984
+91	89	9	hope debug successfully91	1624358984
+92	62	2	hope debug successfully92	1624358984
+93	91	6	hope debug successfully93	1624358984
+94	86	6	hope debug successfully94	1624358984
+95	26	7	hope debug successfully95	1624358984
+96	44	4	hope debug successfully96	1624358984
+97	57	1	hope debug successfully97	1624358984
+98	2	9	hope debug successfully98	1624358984
+99	83	7	hope debug successfully99	1624358984
+100	55	3	hope debug successfully100	1624358984
+101	68	5	hope debug successfully101	1624358984
+102	65	6	hope debug successfully102	1624358984
+103	1	1	hope debug successfully103	1624358984
+104	50	5	hope debug successfully104	1624358984
+105	96	10	hope debug successfully105	1624358984
+106	64	9	hope debug successfully106	1624358984
+107	23	6	hope debug successfully107	1624358984
+108	82	7	hope debug successfully108	1624358984
+109	28	7	hope debug successfully109	1624358984
+110	87	4	hope debug successfully110	1624358984
+111	83	9	hope debug successfully111	1624358984
+112	68	3	hope debug successfully112	1624358984
+113	18	10	hope debug successfully113	1624358984
+114	29	6	hope debug successfully114	1624358984
+115	70	10	hope debug successfully115	1624358984
+116	6	2	hope debug successfully116	1624358984
+117	42	6	hope debug successfully117	1624358984
+118	76	2	hope debug successfully118	1624358984
+119	36	1	hope debug successfully119	1624358984
+120	91	1	hope debug successfully120	1624358984
+121	70	5	hope debug successfully121	1624358984
+122	23	1	hope debug successfully122	1624358984
+123	98	3	hope debug successfully123	1624358984
+124	69	3	hope debug successfully124	1624358984
+125	7	5	hope debug successfully125	1624358984
+126	65	10	hope debug successfully126	1624358984
+127	67	7	hope debug successfully127	1624358984
+128	66	6	hope debug successfully128	1624358984
+129	50	7	hope debug successfully129	1624358984
+130	79	2	hope debug successfully130	1624358984
+131	29	2	hope debug successfully131	1624358984
+132	67	9	hope debug successfully132	1624358984
+133	87	8	hope debug successfully133	1624358984
+134	99	7	hope debug successfully134	1624358984
+135	13	6	hope debug successfully135	1624358984
+136	83	3	hope debug successfully136	1624358984
+137	75	8	hope debug successfully137	1624358984
+138	43	6	hope debug successfully138	1624358984
+139	24	9	hope debug successfully139	1624358984
+140	13	5	hope debug successfully140	1624358984
+141	57	6	hope debug successfully141	1624358984
+142	9	5	hope debug successfully142	1624358984
+143	27	5	hope debug successfully143	1624358984
+144	16	3	hope debug successfully144	1624358984
+145	32	1	hope debug successfully145	1624358984
+146	9	8	hope debug successfully146	1624358984
+147	87	6	hope debug successfully147	1624358984
+148	56	1	hope debug successfully148	1624358984
+149	6	3	hope debug successfully149	1624358984
+150	34	3	hope debug successfully150	1624358984
+151	65	6	hope debug successfully151	1624358984
+152	93	7	hope debug successfully152	1624358984
+153	72	9	hope debug successfully153	1624358984
+154	66	6	hope debug successfully154	1624358984
+155	47	3	hope debug successfully155	1624358984
+156	10	2	hope debug successfully156	1624358984
+157	20	6	hope debug successfully157	1624358984
+158	15	10	hope debug successfully158	1624358984
+159	11	10	hope debug successfully159	1624358984
+160	63	9	hope debug successfully160	1624358984
+161	83	10	hope debug successfully161	1624358984
+162	86	7	hope debug successfully162	1624358984
+163	15	6	hope debug successfully163	1624358984
+164	23	10	hope debug successfully164	1624358984
+165	61	1	hope debug successfully165	1624358984
+166	70	10	hope debug successfully166	1624358984
+167	95	3	hope debug successfully167	1624358984
+168	85	9	hope debug successfully168	1624358984
+169	64	5	hope debug successfully169	1624358984
+170	72	5	hope debug successfully170	1624358984
+171	31	10	hope debug successfully171	1624358984
+172	62	10	hope debug successfully172	1624358984
+173	3	8	hope debug successfully173	1624358984
+174	13	5	hope debug successfully174	1624358984
+175	89	9	hope debug successfully175	1624358984
+176	65	7	hope debug successfully176	1624358984
+177	86	8	hope debug successfully177	1624358984
+178	81	4	hope debug successfully178	1624358984
+179	63	10	hope debug successfully179	1624358984
+180	22	5	hope debug successfully180	1624358984
+181	84	10	hope debug successfully181	1624358984
+182	5	3	hope debug successfully182	1624358984
+183	91	9	hope debug successfully183	1624358984
+184	14	2	hope debug successfully184	1624358984
+185	99	5	hope debug successfully185	1624358984
+186	43	2	hope debug successfully186	1624358984
+187	6	2	hope debug successfully187	1624358984
+188	76	6	hope debug successfully188	1624358984
+189	5	1	hope debug successfully189	1624358984
+190	29	6	hope debug successfully190	1624358984
+191	21	3	hope debug successfully191	1624358984
+192	99	8	hope debug successfully192	1624358984
+193	39	9	hope debug successfully193	1624358984
+194	76	10	hope debug successfully194	1624358984
+195	98	4	hope debug successfully195	1624358984
+196	12	5	hope debug successfully196	1624358984
+197	70	5	hope debug successfully197	1624358984
+198	24	6	hope debug successfully198	1624358984
+199	6	5	hope debug successfully199	1624358984
+200	14	3	hope debug successfully200	1624358984
+201	27	1	hope debug successfully201	1624358984
+202	61	5	hope debug successfully202	1624358984
+203	59	9	hope debug successfully203	1624358984
+204	36	6	hope debug successfully204	1624358984
+205	47	5	hope debug successfully205	1624358984
+206	41	10	hope debug successfully206	1624358984
+207	13	9	hope debug successfully207	1624358984
+209	79	1	hope debug successfully209	1624358984
+210	15	1	hope debug successfully210	1624358984
+211	3	1	hope debug successfully211	1624358984
+212	44	2	hope debug successfully212	1624358984
+213	9	3	hope debug successfully213	1624358984
+214	88	5	hope debug successfully214	1624358984
+215	57	9	hope debug successfully215	1624358984
+216	30	6	hope debug successfully216	1624358984
+217	56	9	hope debug successfully217	1624358984
+218	85	10	hope debug successfully218	1624358984
+219	100	6	hope debug successfully219	1624358984
+220	71	9	hope debug successfully220	1624358984
+221	65	10	hope debug successfully221	1624358984
+222	75	10	hope debug successfully222	1624358984
+223	13	4	hope debug successfully223	1624358984
+224	18	3	hope debug successfully224	1624358984
+225	32	3	hope debug successfully225	1624358984
+226	58	6	hope debug successfully226	1624358984
+227	72	6	hope debug successfully227	1624358984
+228	84	4	hope debug successfully228	1624358984
+229	7	6	hope debug successfully229	1624358984
+230	95	7	hope debug successfully230	1624358984
+231	84	10	hope debug successfully231	1624358984
+232	54	8	hope debug successfully232	1624358984
+233	57	10	hope debug successfully233	1624358984
+234	46	2	hope debug successfully234	1624358984
+235	56	4	hope debug successfully235	1624358984
+236	85	1	hope debug successfully236	1624358984
+237	18	1	hope debug successfully237	1624358984
+238	84	8	hope debug successfully238	1624358984
+239	11	4	hope debug successfully239	1624358984
+240	29	9	hope debug successfully240	1624358984
+241	34	4	hope debug successfully241	1624358984
+242	93	1	hope debug successfully242	1624358984
+243	67	6	hope debug successfully243	1624358984
+244	14	4	hope debug successfully244	1624358984
+245	36	8	hope debug successfully245	1624358984
+246	50	1	hope debug successfully246	1624358984
+247	41	3	hope debug successfully247	1624358984
+248	94	10	hope debug successfully248	1624358984
+249	60	2	hope debug successfully249	1624358984
+250	27	8	hope debug successfully250	1624358984
+251	46	6	hope debug successfully251	1624358984
+252	97	5	hope debug successfully252	1624358984
+253	50	10	hope debug successfully253	1624358984
+254	75	5	hope debug successfully254	1624358984
+255	71	10	hope debug successfully255	1624358984
+256	38	9	hope debug successfully256	1624358984
+257	73	5	hope debug successfully257	1624358984
+258	39	8	hope debug successfully258	1624358984
+259	77	9	hope debug successfully259	1624358984
+260	67	4	hope debug successfully260	1624358984
+261	78	9	hope debug successfully261	1624358984
+262	6	4	hope debug successfully262	1624358984
+263	41	9	hope debug successfully263	1624358984
+264	50	8	hope debug successfully264	1624358984
+265	15	10	hope debug successfully265	1624358984
+266	66	4	hope debug successfully266	1624358984
+267	93	8	hope debug successfully267	1624358984
+268	40	5	hope debug successfully268	1624358984
+269	70	9	hope debug successfully269	1624358984
+270	20	5	hope debug successfully270	1624358984
+271	55	7	hope debug successfully271	1624358984
+272	37	10	hope debug successfully272	1624358984
+273	14	3	hope debug successfully273	1624358984
+274	13	6	hope debug successfully274	1624358984
+275	35	4	hope debug successfully275	1624358984
+276	52	3	hope debug successfully276	1624358984
+277	2	2	hope debug successfully277	1624358984
+278	8	1	hope debug successfully278	1624358984
+279	25	9	hope debug successfully279	1624358984
+280	29	6	hope debug successfully280	1624358984
+281	34	6	hope debug successfully281	1624358984
+282	38	9	hope debug successfully282	1624358984
+283	5	8	hope debug successfully283	1624358984
+284	63	9	hope debug successfully284	1624358984
+285	91	3	hope debug successfully285	1624358984
+286	8	6	hope debug successfully286	1624358984
+287	99	8	hope debug successfully287	1624358984
+288	78	6	hope debug successfully288	1624358984
+289	40	4	hope debug successfully289	1624358984
+290	90	6	hope debug successfully290	1624358984
+291	37	6	hope debug successfully291	1624358984
+292	1	7	hope debug successfully292	1624358984
+293	24	7	hope debug successfully293	1624358984
+294	11	2	hope debug successfully294	1624358984
+295	99	9	hope debug successfully295	1624358984
+296	57	4	hope debug successfully296	1624358984
+297	93	9	hope debug successfully297	1624358984
+298	63	10	hope debug successfully298	1624358984
+299	92	9	hope debug successfully299	1624358984
+300	94	4	hope debug successfully300	1624358984
+301	9	10	bla bra bza	1624431156
+302	69	10	today is a good day	1624512365
+303	69	10	today is a good day	1624513127
+304	69	10	today is a good day	1624513129
+305	69	10	today is a good day	1624513131
+306	69	10	today is a good day	1624513132
+307	69	10	today is a good day	1624513133
+308	69	10	today is a good day	1624513134
+309	69	10	today is a good day	1624513135
+310	69	10	today is a good day	1624513137
+311	69	10	today is a good day	1624513138
+208	91	2	today is a gooood day	1624358984
+312	69	10	today is a good day	1624531774
+313	69	10	today is a good day	1624534125
+314	1	10	today is a good day	1624534293
+315	1	10	today is a good day	1624534300
+316	1	10	today is a good day	1624534301
+317	1	10	today is a good day	1624534303
+318	1	10	today is a good day	1624534304
+319	1	10	today is a good day	1624534564
+320	1	10	today is a good day	1624534569
+321	1	10	today is a good day	1624534818
+\.
+
+
+--
+-- Data for Name: useranimal; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.useranimal (id, userid, animalid, animalstatus, feedingdays, timebirth, timeend) FROM stdin;
+56	2	dog	egg	1	1624372751	\N
+17	3	dog	egg	0	1624372751	\N
+43	8	dog	egg	3	1624372751	\N
+79	6	dog	egg	4	1624372751	\N
+92	7	dog	egg	4	1624372751	\N
+97	6	dog	egg	3	1624372751	\N
+111	9	cat	egg	5	1624372751	\N
+2	28	dog	egg	6	1624372751	\N
+3	25	dog	egg	5	1624372751	\N
+5	18	dog	egg	0	1624372751	\N
+11	44	dog	egg	4	1624372751	\N
+60	24	dog	egg	1	1624372751	\N
+67	45	dog	egg	4	1624372751	\N
+71	14	dog	egg	3	1624372751	\N
+72	39	dog	egg	6	1624372751	\N
+73	32	dog	egg	1	1624372751	\N
+74	12	dog	egg	2	1624372751	\N
+76	10	dog	egg	2	1624372751	\N
+78	28	dog	egg	3	1624372751	\N
+83	25	dog	egg	4	1624372751	\N
+84	19	dog	egg	0	1624372751	\N
+88	11	dog	egg	1	1624372751	\N
+90	17	dog	egg	4	1624372751	\N
+93	30	dog	egg	4	1624372751	\N
+94	21	dog	egg	4	1624372751	\N
+259	40	dinosaur	egg	10	1624372751	\N
+265	25	dinosaur	egg	15	1624372751	\N
+268	25	dinosaur	egg	19	1624372751	\N
+95	40	dog	egg	2	1624372751	\N
+98	29	dog	egg	2	1624372751	\N
+100	38	dog	egg	3	1624372751	\N
+101	23	cat	egg	12	1624372751	\N
+105	12	cat	egg	3	1624372751	\N
+106	29	cat	egg	10	1624372751	\N
+108	40	cat	egg	11	1624372751	\N
+115	24	cat	egg	5	1624372751	\N
+120	13	cat	egg	3	1624372751	\N
+122	44	cat	egg	3	1624372751	\N
+124	25	cat	egg	9	1624372751	\N
+125	19	cat	egg	14	1624372751	\N
+138	49	cat	egg	9	1624372751	\N
+140	33	cat	egg	9	1624372751	\N
+141	32	cat	egg	12	1624372751	\N
+143	14	cat	egg	6	1624372751	\N
+158	42	cat	egg	3	1624372751	\N
+160	10	cat	egg	12	1624372751	\N
+161	20	cat	egg	0	1624372751	\N
+164	38	cat	egg	3	1624372751	\N
+167	49	cat	egg	2	1624372751	\N
+170	37	cat	egg	2	1624372751	\N
+171	11	cat	egg	7	1624372751	\N
+173	17	cat	egg	2	1624372751	\N
+174	15	cat	egg	4	1624372751	\N
+175	24	cat	egg	6	1624372751	\N
+180	39	cat	egg	5	1624372751	\N
+184	15	cat	egg	7	1624372751	\N
+186	22	cat	egg	9	1624372751	\N
+188	36	cat	egg	5	1624372751	\N
+193	20	cat	egg	3	1624372751	\N
+194	12	cat	egg	7	1624372751	\N
+196	26	cat	egg	2	1624372751	\N
+199	10	cat	egg	13	1624372751	\N
+203	10	dinosaur	egg	19	1624372751	\N
+205	20	dinosaur	egg	17	1624372751	\N
+208	29	dinosaur	egg	11	1624372751	\N
+209	32	dinosaur	egg	11	1624372751	\N
+211	49	dinosaur	egg	1	1624372751	\N
+215	15	dinosaur	egg	9	1624372751	\N
+220	11	dinosaur	egg	16	1624372751	\N
+1	5	dog	born	7	1624372751	\N
+8	89	dog	born	7	1624372751	\N
+18	28	dog	born	7	1624372751	\N
+28	65	dog	born	7	1624372751	\N
+32	48	dog	born	7	1624372751	\N
+34	9	dog	born	7	1624372751	\N
+64	59	dog	born	7	1624372751	\N
+75	58	dog	born	7	1624372751	\N
+77	54	dog	born	7	1624372751	\N
+96	76	dog	born	7	1624372751	\N
+99	33	dog	born	7	1624372751	\N
+221	39	dinosaur	egg	5	1624372751	\N
+222	15	dinosaur	egg	12	1624372751	\N
+223	12	dinosaur	egg	8	1624372751	\N
+229	22	dinosaur	egg	16	1624372751	\N
+231	20	dinosaur	egg	24	1624372751	\N
+233	36	dinosaur	egg	13	1624372751	\N
+235	16	dinosaur	egg	10	1624372751	\N
+239	43	dinosaur	egg	22	1624372751	\N
+240	18	dinosaur	egg	16	1624372751	\N
+243	44	dinosaur	egg	4	1624372751	\N
+244	47	dinosaur	egg	6	1624372751	\N
+246	18	dinosaur	egg	5	1624372751	\N
+249	35	dinosaur	egg	23	1624372751	\N
+250	18	dinosaur	egg	25	1624372751	\N
+251	31	dinosaur	egg	5	1624372751	\N
+252	40	dinosaur	egg	17	1624372751	\N
+253	16	dinosaur	egg	22	1624372751	\N
+255	42	dinosaur	egg	5	1624372751	\N
+256	22	dinosaur	egg	22	1624372751	\N
+258	38	dinosaur	egg	26	1624372751	\N
+278	36	dinosaur	egg	19	1624372751	\N
+119	25	cat	born	15	1624372751	\N
+66	1	dog	born	6	1624372751	\N
+87	1	dog	born	6	1624372751	\N
+123	1	cat	born	14	1624372751	\N
+4	94	dog	death	1	1624372751	\N
+6	85	dog	death	0	1624372751	\N
+7	93	dog	death	1	1624372751	\N
+9	98	dog	death	6	1624372751	\N
+10	66	dog	death	2	1624372751	\N
+151	7	cat	egg	3	1624372751	\N
+126	28	cat	egg	13	1624372751	\N
+127	19	cat	egg	14	1624372751	\N
+128	37	cat	egg	3	1624372751	\N
+130	42	cat	egg	0	1624372751	\N
+131	32	cat	egg	12	1624372751	\N
+132	45	cat	egg	2	1624372751	\N
+134	21	cat	egg	8	1624372751	\N
+147	1	cat	born	14	1624372751	\N
+185	59	cat	born	15	1624372751	\N
+190	87	cat	born	15	1624372751	\N
+192	46	cat	born	15	1624372751	\N
+216	50	dinosaur	born	28	1624372751	\N
+129	55	cat	death	9	1624372751	\N
+133	100	cat	death	12	1624372751	\N
+135	67	cat	death	10	1624372751	\N
+136	79	cat	death	12	1624372751	\N
+183	2	cat	egg	4	1624372751	\N
+202	3	dinosaur	egg	4	1624372751	\N
+204	7	dinosaur	egg	9	1624372751	\N
+218	6	dinosaur	egg	2	1624372751	\N
+237	7	dinosaur	egg	23	1624372751	\N
+257	9	dinosaur	egg	27	1624372751	\N
+260	4	dinosaur	egg	14	1624372751	\N
+270	1	dinosaur	egg	26	1624372751	\N
+271	2	dinosaur	egg	8	1624372751	\N
+272	2	dinosaur	egg	8	1624372751	\N
+275	5	dinosaur	egg	24	1624372751	\N
+287	1	dinosaur	egg	20	1624372751	\N
+291	8	dinosaur	egg	21	1624372751	\N
+294	2	dinosaur	egg	13	1624372751	\N
+299	8	dinosaur	egg	7	1624372751	\N
+15	27	dog	egg	2	1624372751	\N
+19	45	dog	egg	2	1624372751	\N
+21	33	dog	egg	5	1624372751	\N
+24	42	dog	egg	1	1624372751	\N
+264	96	dinosaur	born	28	1624372751	\N
+25	18	dog	egg	4	1624372751	\N
+26	32	dog	egg	2	1624372751	\N
+27	49	dog	egg	2	1624372751	\N
+29	25	dog	egg	3	1624372751	\N
+304	72	dog	death	0	1624475508	\N
+168	1	cat	born	14	1624372751	\N
+177	1	cat	born	14	1624372751	\N
+182	1	cat	born	14	1624372751	\N
+12	59	dog	death	6	1624372751	\N
+13	75	dog	death	5	1624372751	\N
+14	66	dog	death	1	1624372751	\N
+16	61	dog	death	0	1624372751	\N
+20	74	dog	death	2	1624372751	\N
+22	72	dog	death	4	1624372751	\N
+23	52	dog	death	0	1624372751	\N
+30	77	dog	death	1	1624372751	\N
+31	65	dog	death	1	1624372751	\N
+33	79	dog	death	0	1624372751	\N
+35	89	dog	death	6	1624372751	\N
+36	59	dog	death	4	1624372751	\N
+38	54	dog	death	3	1624372751	\N
+39	77	dog	death	4	1624372751	\N
+40	88	dog	death	2	1624372751	\N
+46	50	dog	death	1	1624372751	\N
+47	62	dog	death	5	1624372751	\N
+51	51	dog	death	2	1624372751	\N
+52	69	dog	death	4	1624372751	\N
+53	91	dog	death	2	1624372751	\N
+54	55	dog	death	6	1624372751	\N
+55	59	dog	death	1	1624372751	\N
+57	76	dog	death	0	1624372751	\N
+59	72	dog	death	5	1624372751	\N
+61	90	dog	death	1	1624372751	\N
+62	75	dog	death	3	1624372751	\N
+63	96	dog	death	6	1624372751	\N
+65	66	dog	death	0	1624372751	\N
+68	85	dog	death	2	1624372751	\N
+69	57	dog	death	5	1624372751	\N
+70	85	dog	death	6	1624372751	\N
+80	68	dog	death	4	1624372751	\N
+81	64	dog	death	3	1624372751	\N
+82	96	dog	death	2	1624372751	\N
+85	78	dog	death	0	1624372751	\N
+86	66	dog	death	4	1624372751	\N
+89	58	dog	death	1	1624372751	\N
+91	52	dog	death	2	1624372751	\N
+261	96	dinosaur	death	1	1624372751	\N
+262	60	dinosaur	death	3	1624372751	\N
+263	65	dinosaur	death	23	1624372751	\N
+266	80	dinosaur	death	23	1624372751	\N
+267	97	dinosaur	death	26	1624372751	\N
+269	88	dinosaur	death	14	1624372751	\N
+273	55	dinosaur	death	27	1624372751	\N
+37	47	dog	egg	2	1624372751	\N
+41	23	dog	egg	3	1624372751	\N
+42	40	dog	egg	3	1624372751	\N
+44	30	dog	egg	1	1624372751	\N
+45	45	dog	egg	3	1624372751	\N
+48	16	dog	egg	3	1624372751	\N
+49	12	dog	egg	0	1624372751	\N
+50	11	dog	egg	3	1624372751	\N
+58	41	dog	egg	4	1624372751	\N
+102	52	cat	death	4	1624372751	\N
+103	51	cat	death	5	1624372751	\N
+104	79	cat	death	12	1624372751	\N
+107	66	cat	death	7	1624372751	\N
+109	99	cat	death	12	1624372751	\N
+110	53	cat	death	13	1624372751	\N
+112	61	cat	death	14	1624372751	\N
+113	85	cat	death	2	1624372751	\N
+114	80	cat	death	14	1624372751	\N
+116	100	cat	death	11	1624372751	\N
+117	56	cat	death	13	1624372751	\N
+118	79	cat	death	11	1624372751	\N
+121	60	cat	death	7	1624372751	\N
+137	56	cat	death	0	1624372751	\N
+139	62	cat	death	2	1624372751	\N
+142	94	cat	death	5	1624372751	\N
+144	88	cat	death	1	1624372751	\N
+145	94	cat	death	12	1624372751	\N
+146	58	cat	death	13	1624372751	\N
+148	100	cat	death	12	1624372751	\N
+149	66	cat	death	3	1624372751	\N
+150	66	cat	death	9	1624372751	\N
+152	94	cat	death	2	1624372751	\N
+153	53	cat	death	1	1624372751	\N
+154	99	cat	death	2	1624372751	\N
+155	86	cat	death	0	1624372751	\N
+156	88	cat	death	8	1624372751	\N
+157	75	cat	death	2	1624372751	\N
+159	89	cat	death	10	1624372751	\N
+162	88	cat	death	9	1624372751	\N
+163	58	cat	death	9	1624372751	\N
+165	98	cat	death	2	1624372751	\N
+166	97	cat	death	7	1624372751	\N
+169	81	cat	death	10	1624372751	\N
+172	51	cat	death	4	1624372751	\N
+176	81	cat	death	11	1624372751	\N
+178	55	cat	death	5	1624372751	\N
+179	62	cat	death	13	1624372751	\N
+181	66	cat	death	1	1624372751	\N
+187	67	cat	death	13	1624372751	\N
+189	84	cat	death	11	1624372751	\N
+191	74	cat	death	13	1624372751	\N
+195	80	cat	death	1	1624372751	\N
+197	87	cat	death	14	1624372751	\N
+198	81	cat	death	8	1624372751	\N
+200	88	cat	death	2	1624372751	\N
+201	69	dinosaur	death	20	1624372751	\N
+206	60	dinosaur	death	7	1624372751	\N
+207	93	dinosaur	death	26	1624372751	\N
+210	93	dinosaur	death	7	1624372751	\N
+212	91	dinosaur	death	21	1624372751	\N
+213	93	dinosaur	death	10	1624372751	\N
+214	90	dinosaur	death	0	1624372751	\N
+217	62	dinosaur	death	25	1624372751	\N
+219	62	dinosaur	death	8	1624372751	\N
+224	57	dinosaur	death	14	1624372751	\N
+225	74	dinosaur	death	13	1624372751	\N
+226	82	dinosaur	death	5	1624372751	\N
+227	63	dinosaur	death	3	1624372751	\N
+228	91	dinosaur	death	17	1624372751	\N
+230	69	dinosaur	death	0	1624372751	\N
+232	67	dinosaur	death	6	1624372751	\N
+234	55	dinosaur	death	26	1624372751	\N
+236	92	dinosaur	death	9	1624372751	\N
+238	86	dinosaur	death	0	1624372751	\N
+241	74	dinosaur	death	24	1624372751	\N
+242	72	dinosaur	death	25	1624372751	\N
+245	58	dinosaur	death	5	1624372751	\N
+247	94	dinosaur	death	13	1624372751	\N
+248	68	dinosaur	death	13	1624372751	\N
+254	94	dinosaur	death	11	1624372751	\N
+274	92	dinosaur	death	19	1624372751	\N
+276	96	dinosaur	death	23	1624372751	\N
+277	56	dinosaur	death	8	1624372751	\N
+279	59	dinosaur	death	19	1624372751	\N
+281	94	dinosaur	death	17	1624372751	\N
+283	93	dinosaur	death	6	1624372751	\N
+284	54	dinosaur	death	6	1624372751	\N
+285	71	dinosaur	death	10	1624372751	\N
+289	100	dinosaur	death	23	1624372751	\N
+290	67	dinosaur	death	16	1624372751	\N
+292	73	dinosaur	death	21	1624372751	\N
+298	50	dinosaur	death	13	1624372751	\N
+301	78	cat	death	0	1624442260	\N
+302	66	cat	death	0	1624442277	\N
+303	72	dog	death	0	1624475264	\N
+305	69	cat	death	0	1624510816	\N
+280	26	dinosaur	egg	21	1624372751	\N
+282	42	dinosaur	egg	25	1624372751	\N
+286	19	dinosaur	egg	12	1624372751	\N
+288	16	dinosaur	egg	15	1624372751	\N
+293	17	dinosaur	egg	12	1624372751	\N
+295	34	dinosaur	egg	1	1624372751	\N
+296	12	dinosaur	egg	2	1624372751	\N
+297	22	dinosaur	egg	15	1624372751	\N
+300	28	dinosaur	egg	22	1624372751	\N
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.users (id, name, createday, todaysscore, weeklyscore, monthlyscore, cannewanimal, dailynote) FROM stdin;
+41	kevin40	1624357600	4	7	3	1	2
+42	kevin41	1624357600	3	8	7	1	2
+43	kevin42	1624357600	9	6	10	1	2
+44	kevin43	1624357600	9	8	3	1	2
+45	kevin44	1624357600	5	7	5	1	2
+46	kevin45	1624357600	10	10	6	1	2
+47	kevin46	1624357600	1	3	5	1	2
+48	kevin47	1624357600	9	2	5	1	2
+49	kevin48	1624357600	7	1	10	1	2
+50	kevin49	1624357600	2	7	2	1	2
+51	kevin50	1624357600	4	8	9	1	2
+52	kevin51	1624357600	10	1	9	1	2
+53	kevin52	1624357600	1	5	4	1	2
+54	kevin53	1624357600	3	4	5	1	2
+55	kevin54	1624357600	5	5	5	1	2
+56	kevin55	1624357600	5	2	2	1	2
+57	kevin56	1624357600	8	3	4	1	2
+86	kevin85	1624357600	3	8	10	1	2
+87	kevin86	1624357600	10	6	2	1	2
+88	kevin87	1624357600	2	7	5	1	2
+89	kevin88	1624357600	8	10	10	1	2
+90	kevin89	1624357600	1	10	7	1	2
+91	kevin90	1624357600	4	7	2	1	2
+92	kevin91	1624357600	2	9	10	1	2
+93	kevin92	1624357600	4	10	10	1	2
+94	kevin93	1624357600	2	4	10	1	2
+95	kevin94	1624357600	3	8	2	1	2
+96	kevin95	1624357600	5	9	7	1	2
+97	kevin96	1624357600	6	3	8	1	2
+18	kevin17	1624357600	5	8	1	1	2
+19	kevin18	1624357600	4	8	4	1	2
+2	kevin1	1624357600	5	5	3	1	3
+3	kevin2	1624357600	5	8	9	1	3
+4	kevin3	1624357600	3	8	2	1	3
+5	kevin4	1624357600	7	5	5	1	3
+6	kevin5	1624357600	8	2	6	1	3
+7	kevin6	1624357600	3	2	7	1	3
+1	kevin	1624357388	10	10	10	1	12
+99	kevin98	1624357600	7	4	10	1	2
+100	kevin99	1624357600	7	7	6	1	2
+101	kevin100	1624357600	3	10	8	1	2
+20	kevin19	1624357600	3	3	6	1	2
+21	kevin20	1624357600	8	1	9	1	2
+22	kevin21	1624357600	9	6	7	1	2
+23	kevin22	1624357600	10	4	9	1	2
+24	kevin23	1624357600	1	2	7	1	2
+38	kevin37	1624357600	9	3	2	1	2
+39	kevin38	1624357600	3	2	5	1	2
+40	kevin39	1624357600	7	3	8	1	2
+8	kevin7	1624357600	9	5	2	1	3
+9	kevin8	1624357600	2	7	2	1	3
+10	kevin9	1624357600	9	3	8	1	2
+11	kevin10	1624357600	4	3	3	1	2
+12	kevin11	1624357600	8	10	1	1	2
+13	kevin12	1624357600	10	9	10	1	2
+14	kevin13	1624357600	1	2	7	1	2
+15	kevin14	1624357600	3	2	3	1	2
+16	kevin15	1624357600	4	3	9	1	2
+17	kevin16	1624357600	7	9	1	1	2
+25	kevin24	1624357600	7	2	10	1	2
+26	kevin25	1624357600	9	1	7	1	2
+27	kevin26	1624357600	5	7	2	1	2
+28	kevin27	1624357600	2	7	7	1	2
+29	kevin28	1624357600	8	10	9	1	2
+30	kevin29	1624357600	3	9	7	1	2
+31	kevin30	1624357600	1	1	3	1	2
+32	kevin31	1624357600	5	5	9	1	2
+33	kevin32	1624357600	5	4	7	1	2
+34	kevin33	1624357600	2	3	4	1	2
+35	kevin34	1624357600	5	9	10	1	2
+36	kevin35	1624357600	2	3	2	1	2
+37	kevin36	1624357600	2	4	8	1	2
+69	kevin68	1624357600	6	8	9	1	4
+58	kevin57	1624357600	3	4	6	1	2
+59	kevin58	1624357600	8	8	7	1	2
+60	kevin59	1624357600	1	1	5	1	2
+61	kevin60	1624357600	4	7	2	1	2
+62	kevin61	1624357600	2	7	4	1	2
+63	kevin62	1624357600	3	8	2	1	2
+64	kevin63	1624357600	9	5	8	1	2
+65	kevin64	1624357600	6	7	5	1	2
+66	kevin65	1624357600	6	7	1	1	2
+67	kevin66	1624357600	8	6	1	1	2
+68	kevin67	1624357600	4	6	6	1	2
+70	kevin69	1624357600	7	5	2	1	2
+71	kevin70	1624357600	1	1	1	1	2
+72	kevin71	1624357600	2	3	10	1	2
+73	kevin72	1624357600	4	5	10	1	2
+74	kevin73	1624357600	7	4	5	1	2
+75	kevin74	1624357600	10	5	1	1	2
+76	kevin75	1624357600	9	6	8	1	2
+77	kevin76	1624357600	7	2	1	1	2
+78	kevin77	1624357600	7	5	6	1	2
+79	kevin78	1624357600	1	10	4	1	2
+80	kevin79	1624357600	6	4	4	1	2
+81	kevin80	1624357600	7	6	3	1	2
+82	kevin81	1624357600	2	3	5	1	2
+83	kevin82	1624357600	8	5	10	1	2
+84	kevin83	1624357600	6	7	4	1	2
+85	kevin84	1624357600	7	4	8	1	2
+98	kevin97	1624357600	10	5	6	1	2
+\.
+
+
+--
+-- Name: posts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.posts_id_seq', 321, true);
+
+
+--
+-- Name: useranimal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.useranimal_id_seq', 305, true);
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.users_id_seq', 101, true);
+
+
+--
+-- Name: animals animals_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.animals
+    ADD CONSTRAINT animals_pkey PRIMARY KEY (species);
+
+
+--
+-- Name: posts posts_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.posts
+    ADD CONSTRAINT posts_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: useranimal useranimal_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.useranimal
+    ADD CONSTRAINT useranimal_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: posts_idx_ts; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX posts_idx_ts ON public.posts USING btree (createday);
+
+
+--
+-- Name: posts posts_userid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.posts
+    ADD CONSTRAINT posts_userid_fkey FOREIGN KEY (userid) REFERENCES public.users(id);
+
+
+--
+-- Name: useranimal useranimal_animalid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.useranimal
+    ADD CONSTRAINT useranimal_animalid_fkey FOREIGN KEY (animalid) REFERENCES public.animals(species);
+
+
+--
+-- Name: useranimal useranimal_userid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.useranimal
+    ADD CONSTRAINT useranimal_userid_fkey FOREIGN KEY (userid) REFERENCES public.users(id);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
