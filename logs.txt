@@ -1,0 +1,614 @@
+1623347132 ERROR  ReferenceError: spl is not defined
+    at Object.list (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/src/model/posts.js:18:15)
+    at /Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/src/routers/posts.js:16:6
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at jsonParser (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/types/json.js:110:7)
+1623389213 ERROR  error: there is no parameter $1
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1623389261 ERROR  error: column "snowvotes" of relation "posts" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1623415036 ERROR  error: column "donets" of relation "todos" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1623415165 ERROR  QueryResultError: No data returned from the query.
+    at Query.callback (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-promise/lib/query.js:213:41)
+    at Query.handleReadyForQuery (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg/lib/query.js:138:12)
+    at Client._handleReadyForQuery (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg/lib/client.js:290:19)
+    at Connection.emit (node:events:369:20)
+    at /Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg/lib/connection.js:115:12
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:40:17)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+1624379508 ERROR  error: syntax error at or near "30"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624379592 ERROR  error: syntax error at or near "30"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624379599 ERROR  error: syntax error at or near "30"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624379602 ERROR  error: syntax error at or near "30"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624379603 ERROR  error: syntax error at or near "30"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624379613 ERROR  error: invalid input syntax for type integer: "null"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624379649 ERROR  error: syntax error at or near "30"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624426804 ERROR  error: column "species" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624426960 ERROR  error: column "species" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624427024 ERROR  error: column "species" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624430622 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:41:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624430683 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:41:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624431053 ERROR  ReferenceError: post is not defined
+    at Object.create (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/model/posts.js:28:32)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:46:6
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+1624431061 ERROR  ReferenceError: post is not defined
+    at Object.create (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/model/posts.js:28:32)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:46:6
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+1624433723 ERROR  error: relation "todos" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624433851 ERROR  error: relation "todos" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624433875 ERROR  error: invalid input value for enum status: ""
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624441967 ERROR  error: column "species" of relation "useranimal" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624441976 ERROR  error: column "species" of relation "useranimal" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624442108 ERROR  error: column "species" of relation "useranimal" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624442217 ERROR  error: column "egg" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624444566 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:41:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624444575 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:41:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624444611 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:41:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624444618 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:41:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624444650 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:41:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624475046 ERROR  Error: userid and species are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:74:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624475058 ERROR  Error: userid and species are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:74:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624475246 ERROR  Error: userid and species are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:74:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624475457 ERROR  Error: userid and species are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:74:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624511263 ERROR  error: invalid input value for enum species: "death"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624511270 ERROR  error: invalid input value for enum species: "death"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624513149 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:72:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624513153 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:72:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624513245 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:72:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624513253 ERROR  Error: Mood and text are required
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:72:17
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624513694 ERROR  ReferenceError: uid is not defined
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:93:13
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624514641 ERROR  error: syntax error at or near "RETURNING"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624514650 ERROR  error: syntax error at or near "RETURNING"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624514731 ERROR  error: syntax error at or near "RETURNING"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624514765 ERROR  error: syntax error at or near "RETURNING"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624514889 ERROR  error: syntax error at or near "RETURNING"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624527390 ERROR  TypeError: systemModel.update(...).then is not a function
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:118:6
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624527416 ERROR  TypeError: systemModel.update(...).then is not a function
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:118:6
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624527456 ERROR  TypeError: systemModel.update(...).then is not a function
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:118:6
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624527497 ERROR  TypeError: systemModel.update(...).then is not a function
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/src/routers/posts.js:118:6
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/express/lib/router/index.js:275:10)
+    at /Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/raw-body/index.js:224:16)
+1624527808 ERROR  error: syntax error at or near "("
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624527864 ERROR  error: argument of AND must be type boolean, not type integer
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624528030 ERROR  error: column "users" of relation "users" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624531760 ERROR  error: syntax error at or near "COMMIT"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624533976 ERROR  error: syntax error at or near "COMMIT"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624534515 ERROR  error: syntax error at or near "COMMIT"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624534732 ERROR  error: syntax error at or near "BEGIN"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624534790 ERROR  error: syntax error at or near "COMMIT"
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:278:15)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/brook-ichibang/brook-ichibang/weathermood-server_2021/node_modules/pg-protocol/dist/index.js:10:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
