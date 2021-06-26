@@ -1,13 +1,13 @@
 const axios = require('axios');
 
 // Develop server URL
-let url = 'http://localhost:3000/api/posts';
+//let url = 'http://localhost:3000/api/posts';
 
 // Staging server URL
-// const postBaseUrl = 'http://weathermood-staging.us-west-2.elasticbeanstalk.com/api';
+let url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/posts';
 
 // Production server URL
-// const postBaseUrl = 'http://brook-ichibang.ap-northeast-1.elasticbeanstalk.com/api';
+// let url = 'http://brook-ichibang.ap-northeast-1.elasticbeanstalk.com/api';
 
 
 function list(id, task = '', ts) {
