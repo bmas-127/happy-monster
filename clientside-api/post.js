@@ -4,7 +4,7 @@ const axios = require('axios');
 //let url = 'http://localhost:3000/api/posts';
 
 // Staging server URL
-let url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/posts';
+const url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/posts';
 
 // Production server URL
 // let url = 'http://brook-ichibang.ap-northeast-1.elasticbeanstalk.com/api';
@@ -15,11 +15,11 @@ function list(id, task = '', ts) {
     if (id) query.push(`id=${id}`);
     if (task) query.push(`task=${task}`);
     if (ts) query.push(`ts=${ts}`);
-    if (query.length) url += '?' + query.join('&');
+    const qurl = (query.length) ? url + '?' + query.join('&') : url;
 
-    console.log(`Making GET request to: ${url}`);
+    console.log(`Making GET request to: ${qurl}`);
 
-    return axios.get(url).then(function (res) {
+    return axios.get(qurl).then(function (res) {
     if (res.status !== 200)
         throw new Error(`Unexpected response code: ${res.status}`);
         return res.data;

@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // Develop server URL
-let url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/animals';
+const url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/animals';
 
 // Staging server URL
 // const postBaseUrl = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/animals';
@@ -16,11 +16,11 @@ function list(id, species = '', status = ''){
     if (id) query.push(`id=${id}`);
     if (species) query.push(`species=${species}`);
     if (status) query.push(`status=${status}`);
-    if (query.length) url += '?' + query.join('&');
+    const qurl = (query.length) ? url + '?' + query.join('&') : url;
 
-    console.log(`Making GET request to: ${url}`);
+    console.log(`Making GET request to: ${qurl}`);
 
-    return axios.get(url).then(function (res) {
+    return axios.get(qurl).then(function (res) {
     if (res.status !== 200)
         throw new Error(`Unexpected response code: ${res.status}`);
         return res.data;

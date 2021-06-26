@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // Develop server URL
-let url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/users';
+const url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/users';
 
 // Staging server URL
 // const postBaseUrl = 'http://weathermood-staging.us-west-2.elasticbeanstalk.com/api';
@@ -12,7 +12,7 @@ let url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/user
 
 function list(userid){
 //      const id = 48, species = '', status='';
-    let qurl = url + '?id=' + userid;
+    const qurl = url + '?id=' + userid;
 
     console.log(`Making GET request to: ${qurl}`);
 
