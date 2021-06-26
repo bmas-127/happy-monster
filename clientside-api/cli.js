@@ -12,7 +12,7 @@ const argv = yargs
 var command = argv._[0];
 console.log(`Processing command "${command}"`);
 
-let userid = 69, animalSpecies = 'cat', animalStatus = 'death', animalid = 304;
+let userid = 69, animalSpecies = '', animalStatus = '', animalid = 304;
 let whose = 'others';
 
 let postid = 208, text = 'bla bra bza';
@@ -21,7 +21,7 @@ let score;
 switch(command){
     case 'list-animal':
         /* userid must have value */
-        animalApi.list(userid, animalSpecies, animalStatus).then(post =>{
+        animalApi.list(userid, animalSpecies='', animalStatus='death').then(post =>{
             console.log(post);
         }).catch(err => console.log(err));
         break;

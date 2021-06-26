@@ -16,7 +16,7 @@ if (!global.db) {
       AND animalStatus = 'egg';
 
       Update users 
-      SET canNewAnimal = 1, dailyNote = 2;
+      SET canNewAnimal = 1, dailyNote = 0;
       COMMIT;
     `;
   
