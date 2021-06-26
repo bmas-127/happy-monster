@@ -56,10 +56,10 @@ router.post('/animals/update', function (req, res, next) {
 
 // post list
 router.get('/posts', function (req, res, next) {
-  const { whose, id } = req.query;
+  const { task, id, ts } = req.query;
 
   postModel
-    .list(whose, id)
+    .list(task, id, ts)
     .then((posts) => {
       res.json(posts);
     })

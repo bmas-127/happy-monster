@@ -17,6 +17,7 @@ let whose = 'others';
 
 let postid = 208, text = 'bla bra bza';
 let score;
+let ts = 1624694500;
 
 switch(command){
     case 'list-animal':
@@ -38,7 +39,7 @@ switch(command){
         })
         break;
     case 'list-post':
-        postApi.list(userid, whose).then(post => 
+        postApi.list(user=1, whose='myself', ts).then(post => 
             console.log(post)
         );
         break;

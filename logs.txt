@@ -612,3 +612,37 @@
     at readableAddChunk (node:internal/streams/readable:288:9)
     at Socket.Readable.push (node:internal/streams/readable:227:10)
     at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624692319 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16)
+1624692364 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16)
+1624692473 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16)
+1624692621 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16)
+1624692719 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16)
+1624692749 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16)
+1624692881 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1137:16)
+1624695768 ERROR  error: column "ts" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624695776 ERROR  error: column "ts" does not exist
+    at Parser.parseErrorMessage (/Users/kevinbrook/Desktop/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/kevinbrook/Desktop/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/kevinbrook/Desktop/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/kevinbrook/Desktop/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:369:20)
+    at addChunk (node:internal/streams/readable:313:12)
+    at readableAddChunk (node:internal/streams/readable:288:9)
+    at Socket.Readable.push (node:internal/streams/readable:227:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)

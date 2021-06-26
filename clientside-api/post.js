@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // Develop server URL
-let url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/posts';
+let url = 'http://localhost:3000/api/posts';
 
 // Staging server URL
 // const postBaseUrl = 'http://weathermood-staging.us-west-2.elasticbeanstalk.com/api';
@@ -10,10 +10,11 @@ let url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/post
 // const postBaseUrl = 'http://brook-ichibang.ap-northeast-1.elasticbeanstalk.com/api';
 
 
-function list(id, whose = '') {
+function list(id, task = '', ts) {
     let query = [];
     if (id) query.push(`id=${id}`);
-    if (whose) query.push(`whose=${whose}`);
+    if (task) query.push(`task=${task}`);
+    if (ts) query.push(`ts=${ts}`);
     if (query.length) url += '?' + query.join('&');
 
     console.log(`Making GET request to: ${url}`);

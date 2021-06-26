@@ -4,7 +4,7 @@ const axios = require('axios');
 let url = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/animals';
 
 // Staging server URL
-// const postBaseUrl = 'http://weathermood-staging.us-west-2.elasticbeanstalk.com/api';
+// const postBaseUrl = 'http://happy-monster-dev.ap-northeast-1.elasticbeanstalk.com/api/animals';
 
 // Production server URL
 // const postBaseUrl = 'http://brook-ichibang.ap-northeast-1.elasticbeanstalk.com/api';

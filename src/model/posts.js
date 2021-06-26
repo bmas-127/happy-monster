@@ -4,9 +4,10 @@ if (!global.db) {
   db = pgp(process.env.DB_URL);
 }
 
-function list(whose = '', id) {
+function list(whose = '', id, ts) {
   const where = [];
-  where.push( (whose == 'others') ? 'id != $1' : 'id = $1' ) ;
+  where.push( (whose == 'others') ? 'userid != $1' : 'userid = $1' ) ;
+  if(ts & whose == 'myself') where.push('ts > $2 AND ts < $2 + 86400')
   
   const sql = `
         SELECT *
@@ -16,7 +17,7 @@ function list(whose = '', id) {
         LIMIT 6
     `;
     
-  return db.any(sql, [id]);
+  return db.any(sql, [id, ts]);
 }
 
 function create(userid, score, text) {
