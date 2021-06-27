@@ -646,3 +646,194 @@
     at readableAddChunk (node:internal/streams/readable:288:9)
     at Socket.Readable.push (node:internal/streams/readable:227:10)
     at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+1624723372 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16)
+1624723380 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16)
+1624723392 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16)
+1624723683 ERROR  Error: connect ECONNREFUSED 127.0.0.1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16)
+1624724556 ERROR  error: null value in column "userid" violates not-null constraint
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624724610 ERROR  error: null value in column "userid" violates not-null constraint
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624724617 ERROR  ReferenceError: reg is not defined
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/src/routers/posts.js:104:15
+    at Layer.handle [as handle_request] (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:275:10)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/raw-body/index.js:224:16)
+1624724648 ERROR  error: null value in column "userid" violates not-null constraint
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624725262 ERROR  error: invalid input syntax for type integer: "10000?score=10?text=123"
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624725345 ERROR  error: invalid input syntax for type integer: "10000/?score=10/?text=123"
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624725369 ERROR  error: invalid input syntax for type integer: "10000 ?score=10 ?text=123"
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624725478 ERROR  error: null value in column "userid" violates not-null constraint
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624725632 ERROR  error: insert or update on table "posts" violates foreign key constraint "posts_userid_fkey"
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624726101 ERROR  error: syntax error at or near "'testing'"
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624726162 ERROR  error: syntax error at or near "'testing'"
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624726350 ERROR  QueryResultError: No data returned from the query.
+    at Query.callback (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/query.js:213:41)
+    at Query.handleReadyForQuery (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg/lib/query.js:138:12)
+    at Client._handleReadyForQuery (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg/lib/client.js:290:19)
+    at Connection.emit (events.js:223:5)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg/lib/connection.js:114:12
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:40:17)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+1624726566 ERROR  Error: Property 'socre' doesn't exist.
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/formatting.js:166:19
+    at String.replace (<anonymous>)
+    at Object.object (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/formatting.js:146:22)
+    at Object.formatQuery (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/formatting.js:300:29)
+    at Database.$query (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/query.js:129:40)
+    at Database.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/query.js:263:23)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/database.js:333:42
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+1624727467 ERROR  Error: Property 'name' doesn't exist.
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/formatting.js:166:19
+    at String.replace (<anonymous>)
+    at Object.object (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/formatting.js:146:22)
+    at Object.formatQuery (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/formatting.js:300:29)
+    at Database.$query (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/query.js:129:40)
+    at Database.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/query.js:263:23)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-promise/lib/database.js:333:42
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+1624727512 ERROR  error: column "username" of relation "users" does not exist
+    at Parser.parseErrorMessage (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:223:5)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:290:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:181:23)
+1624727669 ERROR  ReferenceError: Cannot access 'sql' before initialization
+    at Object.create (/Users/lianhaohsiang/Desktop/software/happy-monster/src/model/user.js:26:26)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/src/routers/posts.js:107:6
+    at Layer.handle [as handle_request] (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:275:10)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/body-parser/lib/read.js:130:5
+1624728727 ERROR  TypeError: Cannot read property 'then' of undefined
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/src/routers/posts.js:108:5
+    at Layer.handle [as handle_request] (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:275:10)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/raw-body/index.js:224:16)
+1624728811 ERROR  TypeError: Cannot read property 'then' of undefined
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/src/routers/posts.js:108:5
+    at Layer.handle [as handle_request] (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/express/lib/router/index.js:275:10)
+    at /Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/lianhaohsiang/Desktop/software/happy-monster/node_modules/raw-body/index.js:224:16)

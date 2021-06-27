@@ -99,6 +99,17 @@ router.post('/posts/update', function (req, res, next) {
 });
 
 // create user
+router.post('/users', function (req, res, next) {
+  const { userName} = req.body;
+  console.log(req);
+  
+  userModel
+    .create(userName)
+    .then((posts) => {
+      res.json(posts);
+    })
+    .catch(next);
+});
 
 // list user
 router.get('/users', function (req, res, next) {
