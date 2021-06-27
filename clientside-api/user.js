@@ -23,14 +23,13 @@ function list(userid){
     });
 }
 
-function create(userid, species) {
+function create(userName) {
 //      const userid = 66, species = 'cat';
     console.log(`Making POST request to: ${url}`);
 
     return axios
     .post(url, {
-        userid,
-        species
+        userName
     })
     .then(function (res) {
         if (res.status !== 200)

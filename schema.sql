@@ -12,12 +12,14 @@
 
     CREATE TABLE users (
         id              serial PRIMARY KEY NOT NULL,
-        name            name NOT NULL,
+        name        name NOT NULL,
         createDay       bigint NOT NULL DEFAULT (extract(epoch from now())),
         todaysScore     integer NOT NULL DEFAULT 0,
         weeklyScore     integer NOT NULL DEFAULT 0,
         monthlyScore    integer NOT NULL DEFAULT 0,
-        canNewAnimal    integer NOT NULL DEFAULT 1
+        historyscore    integer NOT NULL DEFAULT 0,
+        currentAnimalStatue integer NOT NULL DEFAULT 0,
+        canNewAnimal    integer NOT NULL DEFAULT 1;
     );
 
     ALTER TABLE users

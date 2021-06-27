@@ -1,3 +1,5 @@
+const { post } = require('../routers/posts');
+
 if (!global.db) {
     const pgp = require('pg-promise')();
     console.log(`==DEBUG== process.env.DB_URL = ${process.env.DB_URL}`);
@@ -6,7 +8,7 @@ if (!global.db) {
   
   function list(id) {
     console.log(id);
-    
+    console.log("hello");
     const sql = `
           SELECT *
           FROM users
@@ -15,14 +17,36 @@ if (!global.db) {
       
     return db.any(sql, [id]);
   }
-  
-  function create(userid, score, text) {
-    const sql = `
-          INSERT INTO posts ($<this:name>)
-          VALUES ($<userid>, $<score>, $<text>)
-          RETURNING *
+
+  async function create(userName) {
+    //console.log("create = ",userName);
+    const pre_sql = `
+          SELECT *
+          FROM users
+          WHERE name = $1
       `;
-    return db.one(sql, { userid, score, text });
+    let data = await db.any(pre_sql, [userName]);
+    var createFlag = 0;
+    if (typeof data[0] === 'undefined'){
+      createFlag = 1;
+    }
+    else{
+      createFlag = 0;
+    }
+    //console.log(createFlag);
+    //var flag = getPreviousData(userName);
+    //console.log(flag);
+    if (createFlag){
+      const sql = `
+      INSERT INTO users(name)
+      VALUES ($<userName>)
+      RETURNING *
+      `;
+      return db.one(sql, { userName });
+    }
+    else{
+      return data[0];
+    }
   }
   
   function update(postid, text){
