@@ -12,7 +12,7 @@
 
     CREATE TABLE users (
         id              serial PRIMARY KEY NOT NULL,
-        userName        name NOT NULL,
+        name        name NOT NULL,
         createDay       bigint NOT NULL DEFAULT (extract(epoch from now())),
         todaysScore     integer NOT NULL DEFAULT 0,
         weeklyScore     integer NOT NULL DEFAULT 0,
