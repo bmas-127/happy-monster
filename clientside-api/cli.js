@@ -56,8 +56,12 @@ switch(command){
         }).catch(err => console.log(err));
         break;
     case 'create-user':
+        userApi.create(userid = "wer7").then(post =>{
+            console.log(post);
+        }).catch(err => console.log(err));
+        break;
     case 'list-user':
-        userApi.list(userid = 66).then(post =>{
+        userApi.list(userid = 88).then(post =>{
             console.log(post);
         }).catch(err => console.log(err));
         break;
